@@ -4,7 +4,7 @@
  * Return: 1 if succesfu;, -1 on error.
  */
 
-int procent(void)
+int porcent(void)
 {
     int count = 0;
 
@@ -70,12 +70,11 @@ int prrintstr(char *ch)
 
 	if (ch == NULL)
 		ch = "(null)";
-
-	while (ch[idx] != '\0')
+	for(idx = 0; ch[idx] != '\0'; idx++)
 	{
 		_putchar(ch[idx]);
 	}
-	return (idx);
+		return (idx);
 }
 
 int printchar(va_list args)

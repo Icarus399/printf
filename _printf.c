@@ -28,19 +28,19 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == 's')
 			{
-				num = prrintsrt(li) + num;
+				num = prrintstr(va_arg(args, char *)) + num;
 			}
 			if (format[i + 1] == 'c')
 			{
-				num += printchar(li);
+				num += printchar(args);
 			}
 			if (format[i + 1] == '%')
 			{
-				num += porcent();
+				num = porcent();
 			}
 			if (format[i + 1] == 'd')
 			{
-				num += printnum();
+				num += printnum(args);
 			}
 			i++;
 		}
