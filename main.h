@@ -11,4 +11,6 @@ int printnum(int idx, int count);
 int _puts(const char *s);
 
 int _putchar(char c);
+
+int prrintstr(char *ch);
 #endif /* MAIN_H */

@@ -22,30 +22,50 @@ int _puts(const char *str)
 	}
 	return (idx);
 }
-int printnum(int idx, int count)
+int printnum(va_list args)
 {
-	int num;
+	int i = 0, j = 0;
+	int num = 0;
+	int arr [13];
+	unsigned int n;
 
-	if (idx < 0)
+	num = va_arg(args, int);
+
+	if (i < 0)
 	{
-		_putchar('-');
-		count++;
-		num = (idx * -1);
+		i += _putchar('-');
+		n = (i * -1);
 	}
 	else
-		num = idx;
+		n = i;
 
-	if (num / 10)
+	if (n == 0)
 	{
-		count = printnum(num / 10, count);
+		num =+ _putchar(n = '0');
+		return (num);
 	}
-	_putchar(num % 10 + '0');
-	count++;
-	return (count);
+	while (n != 0)
+	{
+		arr[j] = n % 10;
+		n = n / 10;
+		j++
+	}
+	for (j = 1 - ; j >= 0, j--)
+	{
+		num =+ _putchar(arr[j] = '0');
+	}
+	return (num);
 }
+int prrintstr(char *ch)
+{
+	int idx = 0;
 
+	if (ch == NULL)
+		ch = "(null)";
 
-
-
-
-
+	while (ch[idx] != '\0')
+	{
+		_putchar(ch[idx]);
+	}
+	return (idx);
+}
