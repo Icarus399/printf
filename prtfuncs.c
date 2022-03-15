@@ -4,6 +4,14 @@
  * Return: 1 if succesfu;, -1 on error.
  */
 
+int procent(void)
+{
+    int count = 0;
+
+    write(1, "%", 1);
+    count++;
+    return (count);
+}
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
@@ -69,3 +77,15 @@ int prrintstr(char *ch)
 	}
 	return (idx);
 }
+
+int printchar(va_list args)
+{
+	char ch;
+
+	ch = va_arg(args, int);
+	_putchar(ch);
+	return (1);
+}
+
+
+

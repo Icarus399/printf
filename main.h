@@ -6,7 +6,7 @@
 
 int _printf(const char *format, ...);
 
-int printnum(int idx, int count);
+int printnum(va_list args);
 
 int _puts(const char *s);
 
