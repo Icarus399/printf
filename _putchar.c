@@ -48,9 +48,9 @@ int printnum(va_list args)
 	{
 		arr[j] = n % 10;
 		n = n / 10;
-		j++
+		j++;
 	}
-	for (j = 1 - ; j >= 0, j--)
+	for (j = j - 1; j >= 0; j--)
 	{
 		num =+ _putchar(arr[j] = '0');
 	}
