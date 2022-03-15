@@ -7,10 +7,10 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, count;
+	int i, num;
 	va_list args;
 
-	count = 0;
+	num = 0;
 	va_start(args, format);
 
 	if (format == NULL)
@@ -22,28 +22,28 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			write(1, &format[i], 1);
-			count++;
+			num++;
 		}
 		else
 		{
 			if (format[i + 1] == 's')
 			{
-				count = func_s(li) + count;
+				num = prrintsrt(li) + num;
 			}
 			if (format[i + 1] == 'c')
 			{
-				count += func_c(li);
+				num += printchar(li);
 			}
 			if (format[i + 1] == '%')
 			{
-				count += func_por();
+				num += porcent();
 			}
 			if (format[i + 1] == 'd')
 			{
-				count += func_por();
+				num += printnum();
 			}
 			i++;
 		}
 	}
-	return (count);
+	return (num);
 }
