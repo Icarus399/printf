@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <stdarg.h>
 
+int porcent(void);
+
 int _printf(const char *format, ...);
 
 int printnum(va_list args);
