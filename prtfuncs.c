@@ -6,15 +6,29 @@
 
 int porcent(void)
 {
-	int count = 0;
+    int count = 0;
 
-	write(1, "%", 1);
-	count++;
-	return (count);
+    write(1, "%", 1);
+    count++;
+    return (count);
 }
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
+}
+int _puts(const char *str)
+{
+	int idx = 0;
+
+	while (str[idx])
+	{
+		if (_putchar(str[idx]) == EOF)
+		{
+			return (EOF);
+		}
+		idx++;
+	}
+	return (idx);
 }
 int printnum(va_list args)
 {
@@ -60,7 +74,7 @@ int prrintstr(char *ch)
 	{
 		_putchar(ch[idx]);
 	}
-	return (idx);
+		return (idx);
 }
 
 int printchar(va_list args)

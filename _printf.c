@@ -42,10 +42,6 @@ int _printf(const char *format, ...)
 			{
 				num += printnum(args);
 			}
-			if (format[i + 1] == 'i')
-			{
-				num += printnum(args);
-			}
 			i++;
 		}
 	}
