@@ -10,8 +10,6 @@ int _printf(const char *format, ...);
 
 int printnum(va_list args);
 
-int _puts(const char *s);
-
 int _putchar(char c);
 
 int prrintstr(char *ch);
