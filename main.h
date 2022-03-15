@@ -13,4 +13,6 @@ int _puts(const char *s);
 int _putchar(char c);
 
 int prrintstr(char *ch);
+
+int printchar(va_list args);
 #endif /* MAIN_H */
