@@ -17,8 +17,8 @@ This is the protype with start with and build our _printf function from.
 ## Compilation process
 We compiled our code using this:
 `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c`
-##Testing
-#main.c file
+# Testing
+## main.c file
 - We used the **main.c file** provided to use by Holberton.
 ```#include <limits.h>
 #include <stdio.h>
@@ -92,7 +92,7 @@ Len:[12]
 Unknown:[%r]
 Unknown:[%r]
 ```
-##About
+## About
 **This is a project done for the Holberton School.**
 
 ## People in question
