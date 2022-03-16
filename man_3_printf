@@ -16,12 +16,7 @@ If we do end up finding a format modifier.
 .P
 This is a custom implementation of putchar that prints using write and returns 1 if it prints something.
 
-.B int _puts(const char *s);
-.P
-This is a custom implementation of puts that is used to write a line or string to the oputput stream (stdout)
-does not include the null character. It does not append a new line and return an interger.
-
-.B int printstr(char *ch);
+.B int prrintstr(char *ch);
 .P
 This analizes the passed string printing character by character and returns the amount of printed characters.
 Also checks if NULL is passed.
@@ -30,6 +25,13 @@ Also checks if NULL is passed.
 .P
 This is a function that searches for the number and prints it depending on the differnt modifiers.
 
+.B int printchar(va_list args)
+.P
+This functions prints a %c modifier character depending on the different arguments passed into it.
+
+.B int porcent(void)
+.P
+This function makes sure to detect the porcentage symbol (%), and accordingly to it's arguments.
 .SH DESCRIPTION
 printf is a control parameter used by functions to output a certain sentence or number.
 
