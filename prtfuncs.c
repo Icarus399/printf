@@ -44,12 +44,13 @@ int printnum(va_list args)
 		i += _putchar('-');
 		n = (i * -1);
 	}
-	else
 		n = i;
+
+		convert(num, 10);
 
 	if (n == 0)
 	{
-		num =+ _putchar(n = '0');
+		num =+ _putchar(n + '0');
 		return (num);
 	}
 	while (n != 0)
@@ -60,7 +61,7 @@ int printnum(va_list args)
 	}
 	for (j = j - 1; j >= 0; j--)
 	{
-		num =+ _putchar(arr[j] = '0');
+		num =+ _putchar(arr[j] + '0');
 	}
 	return (num);
 }

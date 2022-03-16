@@ -6,6 +6,8 @@
 
 int porcent(void);
 
+char *convert(unsigned int num, int base);
+
 int _printf(const char *format, ...);
 
 int printnum(va_list args);

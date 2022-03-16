@@ -7,10 +7,10 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, num;
+	int i, count;
 	va_list args;
 
-	num = 0;
+	count = 0;
 	va_start(args, format);
 
 	if (format == NULL)
@@ -22,28 +22,32 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			write(1, &format[i], 1);
-			num++;
+			count++;
 		}
 		else
 		{
 			if (format[i + 1] == 's')
 			{
-				num = prrintstr(va_arg(args, char *)) + num;
+				count = prrintstr(va_arg(args, char *)) + count;
 			}
 			if (format[i + 1] == 'c')
 			{
-				num += printchar(args);
+				count += printchar(args);
 			}
 			if (format[i + 1] == '%')
 			{
-				num = porcent();
+				count = porcent();
 			}
 			if (format[i + 1] == 'd')
 			{
-				num += printnum(args);
+				count += printnum(args);
+			}
+			if (format[i + 1] == 'i')
+			{
+				count += printnum(args);
 			}
 			i++;
 		}
 	}
-	return (num);
+	return (count);
 }
