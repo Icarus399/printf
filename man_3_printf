@@ -1,6 +1,6 @@
 BI Manpage for our prinf function.
 .BI Contact Ian M. Bonano(ibonano993@gmail.com) or Yaniel Delgado to correct errors or typos.
-.TH _PRINTF 3 2021-11-8 GNU
+.TH _PRINTF 3 2022-3-16 GNU
 .SH NAME
 printf \- format and print data
 .SH SYNOPSIS
