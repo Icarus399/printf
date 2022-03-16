@@ -16,20 +16,6 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
-int _puts(const char *str)
-{
-	int idx = 0;
-
-	while (str[idx])
-	{
-		if (_putchar(str[idx]) == EOF)
-		{
-			return (EOF);
-		}
-		idx++;
-	}
-	return (idx);
-}
 int printnum(va_list args)
 {
 	int num = va_arg(args, int);

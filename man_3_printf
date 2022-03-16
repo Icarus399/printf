@@ -1,45 +1,88 @@
-ManPage created by Yaniel Delgado & Ian Bonano.
-Please email either Yaniel Delgado or Ian Bonano for bugs/errors, so that they can be fixed.
-\n
-Manpage "_printf v1.0" made in March 15th, 2022.
-\n
+BI Manpage for our prinf function.
+.BI Contact Ian M. Bonano(ibonano993@gmail.com) or Yaniel Delgado to correct errors or typos.
+.TH _PRINTF 3 2021-11-8 GNU
 .SH NAME
-\n
-_printf -- formatted output
-\n
+printf \- format and print data
 .SH SYNOPSIS
-\n
-_printf [arguments ...]
-\n
+.B #include "main.h"
+.nf
+.B int _printf(const char *format, ...);
+.fi
+.P
+Here we analize through the formal string printing every character one by one also cheking if we find any format modifier.
+If we do end up finding a format modifier.
+
+.B int _putchar(char c);
+.P
+This is a custom implementation of putchar that prints using write and returns 1 if it prints something.
+
+.B int _puts(const char *s);
+.P
+This is a custom implementation of puts that is used to write a line or string to the oputput stream (stdout)
+does not include the null character. It does not append a new line and return an interger.
+
+.B int printstr(char *ch);
+.P
+This analizes the passed string printing character by character and returns the amount of printed characters.
+Also checks if NULL is passed.
+
+.B int printnum(va_list args);
+.P
+This is a function that searches for the number and prints it depending on the differnt modifiers.
+
 .SH DESCRIPTION
-\n
-_printf function formats and prints its arguments, after the first, under control of the format.
-The prototype of _prinft works with a constant char pointer format which contains four types of objects: 
-strings, which are simply copied to standard output, character escape sequences which are copied to the standar output, digits and integer, which work with a
-loop to get the numbers and format specifications, each of which causes printing of the next successive argument.
-\n
-The format string is reused as often as necessary to satisfy the arguments. Any extra format specifications are evaluated with zero or the null string.
-\n
-.SH OPTIONS
-\n
-_printf validates each case to get the properly switch case as follow:
-\n
-%s - get the string from the arguments
-\n
-%c - get the character from the arguments
-\n
-%i - get the integer from the arguments
-\n
-%d - get the digits from the arguments
-\n
+printf is a control parameter used by functions to output a certain sentence or number.
+
+.SH 	--help
+	display this help and exit
+
+.SH 	--version
+	output version information and exit
+
+.B Example
+.P
+#include "main.h"
+
+int main ()
+
+    _printf("C is fun!! %s");
+    _printf("C %c");
+    _printf("39 %i");
+    _printf("-93 %d");
+
+.B Output
+.P
+C is fun!!
+C
+39
+-93
+
+FORMAT controls the output as in C printf.  Interpreted sequences are:
+
+%S      string - a group of characters
+
+%i      integer - Numbers
+
+%d      integer - Numbers
+
+%c      character - characters like "C", "h", "\0" etc...
+
+FORMAT controls the output as in C printf.  Interpreted sequences are:
+
+%S 	 string
+
+%i 	 integer
+
+%d 	 integer
+
+%c 	 character
+
 .SH SEE ALSO
-\n
-_PRINTF(1)
-\n
+printf(3)
+
+Full documentation at: <https://www.gnu.org/software/coreutils/printf>
+or available locally via: info '(coreutils) printf invocation'
 .SH BUGS
-\n
-There are no reported bugs from repeated testing.
-\n
-.SH AUTHOR
-\n
-Yaniel Delgado (https://github.com/lukioneku) and Ian Bonano (https://github.com/Icarus399).
+No known bugs.
+.SH AUTHORS
+Ian M. Bonano and Yaniel Delgado.
