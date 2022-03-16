@@ -2,7 +2,7 @@
 
 ## Description.
 
-This printf function **...ur _printf function** works exactly the same as the printf function in the **C programming language**. Anything that would work in the **printf** function found in the C programming language will also work on this one.
+This printf function **...our _printf function** works exactly the same as the printf function in the **C programming language**. Anything that would work in the **printf** function found in the C programming language will also work on this one.
 
 ### What is the printf function?
 **The printf() function** is used to print the **“character”, string, float, integer, octal, and hexadecimal values** onto the output screen. We use printf() function with a %d format specifier to display the value of an integer variable.26
