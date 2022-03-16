@@ -32,7 +32,9 @@ int _puts(const char *str)
 }
 int printnum(va_list args)
 {
-	int i = 0, j = 0;
+	int i = 0;
+	char *value = 0;
+	int j = 0;
 	int num = 0;
 	int arr [13];
 	unsigned int n;
@@ -48,6 +50,13 @@ int printnum(va_list args)
 
 		convert(num, 10);
 
+		value = convert(num, 10);
+
+		while (*value != '\0')
+		{
+			_putchar(*value);
+			value++;
+		}
 	if (n == 0)
 	{
 		num =+ _putchar(n + '0');
@@ -86,6 +95,3 @@ int printchar(va_list args)
 	_putchar(ch);
 	return (1);
 }
-
-
-
