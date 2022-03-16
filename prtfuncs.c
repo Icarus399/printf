@@ -32,47 +32,39 @@ int _puts(const char *str)
 }
 int printnum(va_list args)
 {
+	int num = va_arg(args, int);
+	int idx = 0;
 	int i = 0;
-	char *value = 0;
-	int j = 0;
-	int num = 0;
-	int arr [13];
+	int arr[13];
 	unsigned int n;
-
-	num = va_arg(args, int);
-
-	if (i < 0)
 	{
-		i += _putchar('-');
-		n = (i * -1);
-	}
-		n = i;
-
-		convert(num, 10);
-
-		value = convert(num, 10);
-
-		while (*value != '\0')
+		if (num < 0)
 		{
-			_putchar(*value);
-			value++;
+			i += _putchar ('-');
+			n = num * (-1);
 		}
-	if (n == 0)
-	{
-		num =+ _putchar(n + '0');
-		return (num);
+		else
+			n = num;
+
+		if (n == 0)
+		{
+			i += _putchar(n + '0');
+			return (i);
+		}
+
+		while (n != 0)
+		{
+			arr[idx] = n % 10;
+			n /= 10;
+			idx++;
+		}
+
+		for (idx -= 1; idx >= 0; idx--)
+		{
+			i += _putchar(arr[idx] + '0');
+		}
+		return(i);
 	}
-	while (n != 0)
-	{
-		arr[j] = n % 10;
-		n = n / 10;
-		j++;
-	}
-	for (j = j - 1; j >= 0; j--)
-	{
-		num =+ _putchar(arr[j] + '0');
-	}
-	return (num);
 }
 int prrintstr(char *ch)
 {
